@@ -1,0 +1,12 @@
+package privblock.gerald.ryan.mains;
+
+import privblock.gerald.ryan.service.BlockchainService;
+
+public class initializerMain {
+
+	public static void main(String[] args) {
+		BlockchainService blockchainApp = new BlockchainService();
+		blockchainApp.newBlockchainService("beancoin");
+
+	}
+}

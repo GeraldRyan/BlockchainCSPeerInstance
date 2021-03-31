@@ -1,0 +1,23 @@
+package pubsub;
+
+import com.pubnub.api.PNConfiguration;
+
+public class PubNub {
+	private static String publish_key = "pub-c-74f31a3f-e3da-4cbe-81a6-02e2ba8744bd";
+	private static String subscribe_key = "sub-c-1e6d4f2c-9012-11eb-968e-467c259650fa";
+	
+	
+	public PubNub(PNConfiguration pnconfiguration) {
+//		this.publish_key = "pub-c-74f31a3f-e3da-4cbe-81a6-02e2ba8744bd";
+//		this.subscribe_key = "sub-c-1e6d4f2c-9012-11eb-968e-467c259650fa";
+	}
+	
+	public static void main(String[] args) {
+	    PNConfiguration pnConfiguration = new PNConfiguration();
+	    pnConfiguration.setSubscribeKey(subscribe_key);
+	    pnConfiguration.setPublishKey(publish_key);
+	    pnConfiguration.setUuid("sdfdvsdvsdv"); // unique UUID
+
+	    PubNub pubnub = new PubNub(pnConfiguration);
+
+}

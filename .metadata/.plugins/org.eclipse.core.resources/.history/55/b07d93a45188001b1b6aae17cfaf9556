@@ -1,0 +1,5 @@
+package privblock.gerald.ryan.dao;
+
+public class BlockchainDao extends DBConnection implements BlockchainDaoI {
+
+}

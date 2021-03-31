@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestBlock" project="CaseStudy" tests="11" started="11" failures="0" errors="0" ignored="0">
+  <testsuite name="tests.TestBlock" time="10.034">
+    <testcase name="testIsValidBlockBadLastHash" classname="tests.TestBlock" time="0.005"/>
+    <testcase name="testMine_block" classname="tests.TestBlock" time="0.001"/>
+    <testcase name="testSlowlyMinedBlock" classname="tests.TestBlock" time="5.008"/>
+    <testcase name="testIsValidBlockBadBlockHash" classname="tests.TestBlock" time="0.0"/>
+    <testcase name="testIsValidBlockJumpedDifficulty" classname="tests.TestBlock" time="0.0"/>
+    <testcase name="testQuicklyMinedBlock" classname="tests.TestBlock" time="0.011"/>
+    <testcase name="testMinedBlockLimitsAt1" classname="tests.TestBlock" time="5.002"/>
+    <testcase name="testIsValidBlockTrue" classname="tests.TestBlock" time="0.003"/>
+    <testcase name="testMineBlock" classname="tests.TestBlock" time="0.001"/>
+    <testcase name="testGenesis_block" classname="tests.TestBlock" time="0.001"/>
+    <testcase name="testIsValidBlockBadProofOfWork" classname="tests.TestBlock" time="0.001"/>
+  </testsuite>
+</testrun>

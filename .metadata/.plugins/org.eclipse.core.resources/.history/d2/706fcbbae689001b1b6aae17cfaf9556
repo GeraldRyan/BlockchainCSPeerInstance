@@ -1,0 +1,16 @@
+package privblock.gerald.ryan.dao;
+
+import java.util.List;
+
+import privblock.gerald.ryan.entity.Block;
+import privblock.gerald.ryan.entity.Blockchain;
+
+public interface BlockchainDaoI {
+	public boolean newBlockchain(Blockchain blockchain);
+	public Blockchain getBlockchain(int id); // TODO refactor to getting by hash etc
+	public boolean addBlock(Block block);
+	public boolean replaceChain(Blockchain chain);
+	public List<Blockchain> getAllBlockchains();
+	public Block findBlockByHash(long hash); // is it a long?  
+	
+}

@@ -1,0 +1,12 @@
+package privblock.gerald.ryan.dao;
+
+import privblock.gerald.ryan.entity.User;
+
+public interface UserI {
+	public void addUser(User user);
+	public User getUser(int id);
+	public void updateUser(User user);
+	public void removeUser(int id);
+	public List<user> getAllUsers();
+
+}

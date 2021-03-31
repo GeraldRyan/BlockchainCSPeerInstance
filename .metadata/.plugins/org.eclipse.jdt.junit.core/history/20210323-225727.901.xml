@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestBlockchain" project="CaseStudy" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="tests.TestBlockchain" time="0.081">
+    <testcase name="testIsValidChainBadGenesis" classname="tests.TestBlockchain" time="0.0"/>
+    <testcase name="testBlockchainInstance" classname="tests.TestBlockchain" time="0.0"/>
+    <testcase name="testIsValidChain" classname="tests.TestBlockchain" time="0.02"/>
+    <testcase name="testAddBlock" classname="tests.TestBlockchain" time="0.001"/>
+    <testcase name="testReplaceChainShorter" classname="tests.TestBlockchain" time="0.01"/>
+    <testcase name="testReplaceChain" classname="tests.TestBlockchain" time="0.05"/>
+  </testsuite>
+</testrun>

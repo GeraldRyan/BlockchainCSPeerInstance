@@ -1,0 +1,5 @@
+package privblock.gerald.ryan.dao;
+
+public interface BlockchainDaoI {
+
+}

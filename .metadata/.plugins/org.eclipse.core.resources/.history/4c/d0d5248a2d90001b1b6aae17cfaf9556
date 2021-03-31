@@ -1,0 +1,13 @@
+package privblock.gerald.ryan.mains;
+
+import pubsub.PubNubApp;
+
+public class PlayMain {
+	
+	public static void main(String[] args) {
+		PubNubApp pnApp = new PubNubApp(null);
+		
+	}
+
+
+}

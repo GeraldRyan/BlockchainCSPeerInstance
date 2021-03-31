@@ -1,0 +1,7 @@
+package privblock.gerald.ryan.entity;
+
+public class BlockData {
+	private String data;
+	
+
+}

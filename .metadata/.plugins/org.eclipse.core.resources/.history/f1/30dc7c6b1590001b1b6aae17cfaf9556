@@ -1,0 +1,109 @@
+package pubsub;
+
+import java.util.Collections;
+
+import com.pubnub.api.PNConfiguration;
+import com.pubnub.api.PubNub;
+import com.pubnub.api.models.consumer.pubsub.PNMessageResult;
+
+public class PubNubApp {
+	private static String publish_key = "pub-c-74f31a3f-e3da-4cbe-81a6-02e2ba8744bd";
+	private static String subscribe_key = "sub-c-1e6d4f2c-9012-11eb-968e-467c259650fa";
+
+	public PubNubApp(PNConfiguration pnconfiguration) {
+//		this.publish_key = "pub-c-74f31a3f-e3da-4cbe-81a6-02e2ba8744bd";
+//		this.subscribe_key = "sub-c-1e6d4f2c-9012-11eb-968e-467c259650fa";
+	}
+	
+	public PubNub createPubNubInstance() {
+		PNConfiguration pnConfiguration = new PNConfiguration();
+		pnConfiguration.setSubscribeKey(subscribe_key);
+		pnConfiguration.setPublishKey(publish_key);
+		pnConfiguration.setUuid("sdfdvsdvsdv"); // unique UUID
+
+		return new PubNub(pnConfiguration);
+				
+	}
+	
+	public static void main(String[] args) {
+		PNConfiguration pnConfiguration = new PNConfiguration();
+		pnConfiguration.setSubscribeKey(subscribe_key);
+		pnConfiguration.setPublishKey(publish_key);
+		pnConfiguration.setUuid("sdfdvsdvsdv"); // unique UUID
+
+		PubNub pubnub = new PubNub(pnConfiguration);
+		
+		String TEST_CHANNEL = "TEST_CHANNEL";
+		
+		pubnub.subscribe().channels(Collections.singletonList(TEST_CHANNEL));
+		pubnub.publish().channel(TEST_CHANNEL).message("FOOBAR PUBSUBBED);
+			
+	}
+	
+	pubnub.addListener(new SubscribeCallback() {
+
+	    @Override
+	    public void status(PubNub pubnub, PNStatus status) {
+	        if (status.getCategory() == PNStatusCategory.PNUnexpectedDisconnectCategory) {
+	            // This event happens when radio / connectivity is lost
+	        } else if (status.getCategory() == PNStatusCategory.PNConnectedCategory) {
+	            // Connect event. You can do stuff like publish, and know you'll get it.
+	            // Or just use the connected event to confirm you are subscribed for
+	            // UI / internal notifications, etc
+	            if (status.getCategory() == PNStatusCategory.PNConnectedCategory) {
+	                pubnub.publish()
+	                    .channel(channelName)
+	                    .message(messageJsonObject)
+	                    .async((result, publishStatus) -> {
+	                        if (!publishStatus.isError()) {
+	                            // Message successfully published to specified channel.
+	                        }
+	                        // Request processing failed.
+	                        else {
+	                            // Handle message publish error
+	                            // Check 'category' property to find out
+	                            // issues because of which the request failed.
+	                            // Request can be resent using: [status retry];
+	                        }
+	                    });
+	            }
+	        } else if (status.getCategory() == PNStatusCategory.PNReconnectedCategory) {
+	            // Happens as part of our regular operation. This event happens when
+	            // radio / connectivity is lost then regained.
+	        } else if (status.getCategory() == PNStatusCategory.PNDecryptionErrorCategory) {
+	            // Handle message decryption error. Probably client configured to
+	            // encrypt messages and on live data feed it received plain text.
+	        }
+	    }
+
+	    @Override
+	    public void message(PubNub pubnub, PNMessageResult message) {
+	        // Handle new message stored in message.message
+	        if (message.getChannel() != null) {
+	            // Message has been received on channel group stored in
+	            // message.getChannel()
+	        } else {
+	            // Message has been received on channel stored in
+	            // message.getSubscription()
+	        }
+
+	        JsonElement receivedMessageObject = message.getMessage();
+	        System.out.println("Received message: " + receivedMessageObject.toString());
+	        // extract desired parts of the payload, using Gson
+	        String msg = message.getMessage().getAsJsonObject().get("msg").getAsString();
+	        System.out.println("The content of the message is: " + msg);
+
+	        // log the following items with your favorite logger - message.getMessage() -
+	        // message.getSubscription() - message.getTimetoken()
+
+	    }
+
+	    // signal, user, space, membership, messageAction, presence, and file
+	    // listeners have been omitted for reasons of brevity
+	    // but they are mandatory and you MUST at least provide
+	    // no op implementations for these listeners
+
+	});
+
+
+}

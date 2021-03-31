@@ -1,0 +1,12 @@
+package pubsub;
+
+public class PubSub {
+	private String publish_key;
+	private String subscribe_key;
+	
+	
+	public PubSub() {
+		this.publish_key = "pub-c-74f31a3f-e3da-4cbe-81a6-02e2ba8744bd";
+		this.subscribe_key = "sub-c-1e6d4f2c-9012-11eb-968e-467c259650fa"
+	}
+}

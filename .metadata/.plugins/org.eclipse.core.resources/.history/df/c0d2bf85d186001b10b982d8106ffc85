@@ -1,0 +1,8 @@
+package privblock.gerald.ryan.dao;
+
+import privblock.gerald.ryan.entity.Account;
+
+public interface AccountDaoI {
+	public void addAccount(Account account);
+	
+}

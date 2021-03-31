@@ -1,0 +1,185 @@
+[33mcommit 2c3c5af5ae677e536d14cc1f4104c63a47cfded2[m[33m ([m[1;36mHEAD -> [m[1;32mto-spring[m[33m, [m[1;31morigin/to-spring[m[33m)[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Fri Mar 26 16:52:18 2021 -0500
+
+    good place
+
+[33mcommit fcd81a39d0712b28596ce39c81b3dd58acddca08[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Fri Mar 26 00:04:21 2021 -0500
+
+    sorting out link between controller and view
+
+[33mcommit 3a81da9f2cca07eabe079d5587b61e08c10e31d2[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Thu Mar 25 22:48:24 2021 -0500
+
+    got mining block page linked
+
+[33mcommit e2f28232627c63eda8a0fa9de0fe3b8797301cc3[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Thu Mar 25 22:41:05 2021 -0500
+
+    got the homepage up and linked to blockchain
+
+[33mcommit 05deb1236da9872442d22f14243f445ba60b5d98[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Thu Mar 25 22:10:12 2021 -0500
+
+    improved data string representation
+
+[33mcommit 6b62a7c60ea546ae4ad187fa3faecf4678273077[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Thu Mar 25 21:50:02 2021 -0500
+
+    Got a test blockchain showing on endpoints with 5 blocks mined
+
+[33mcommit 38f8b9a48c76028cad5c035c06bf122c355023b0[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Thu Mar 25 21:42:09 2021 -0500
+
+    getting blockchain endpoint up and string printed out to page
+
+[33mcommit 4e71d2e19ae3080a1fdf20497f985bdfbc1b747a[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Thu Mar 25 21:10:10 2021 -0500
+
+    Got blockchain endpoint started
+
+[33mcommit 73a57c23058ddc7de17ff94e7ebb3b398937baa7[m[33m ([m[1;31morigin/Development[m[33m, [m[1;32mDevelopment[m[33m)[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Wed Mar 24 21:31:31 2021 -0500
+
+    Getting ready to convert to spring
+
+[33mcommit 29a06d601f579286319d56bedaa8c87a04683a5d[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Wed Mar 24 21:17:27 2021 -0500
+
+    Before converting to spring mvc project
+
+[33mcommit 46454dd48a7aa3d08cde129643256dad69c7721e[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Tue Mar 23 23:47:26 2021 -0500
+
+    Throws, catches, assertThrow CHECK. Testing basically done. Check. Ready for endpoints and P2P, check
+
+[33mcommit af1a1598d7e4ce6b8a7b7885def8a3e1baa740ea[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Tue Mar 23 22:37:07 2021 -0500
+
+    Got replace chain working. substituted equals() method exclude id
+
+[33mcommit e8b3914511a13cb756b2552a8804d652abb11057[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Tue Mar 23 18:43:45 2021 -0500
+
+    testBlock completed
+
+[33mcommit d8d2b2a1385174fb9464a401ed32378a72f4fb01[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Tue Mar 23 18:13:03 2021 -0500
+
+    Junits being made and passing
+
+[33mcommit 1fd605d751dc780189f02034cc2ec29c47619e8f[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Tue Mar 23 01:17:31 2021 -0500
+
+    Got testing started and genesis HashMap object created as a bundle of data
+
+[33mcommit ef9628c338f7781a1276b8d60baf0410171ea93f[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Sun Mar 21 22:28:21 2021 -0500
+
+    custom named join table
+
+[33mcommit f4b322f143155d48a7b01f88857a36619e451dd9[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Sun Mar 21 22:23:40 2021 -0500
+
+    got blockchain name unique=true enforced
+
+[33mcommit 86d8486a7b854d81f61c283051f20302c0245830[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Sun Mar 21 21:36:33 2021 -0500
+
+    Got the block chain one to many relationship established and working
+
+[33mcommit 4b0aadd7ce1355c32dd7896dbff9b6ff0f5b3007[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Sun Mar 21 19:53:13 2021 -0500
+
+    Got query by name working
+
+[33mcommit 96869d7f5750799ff5919165251a59cf9f3f5b65[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Sun Mar 21 00:01:37 2021 -0500
+
+    GeneratedValue annotation (strategy=GenerationType.IDENTITY) is working and persisting across sessions
+
+[33mcommit 99d09df883dfff13ff23f9d65010992e5ace626d[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Thu Mar 18 20:11:08 2021 -0500
+
+    converted to maven project, seems to run when pom activated
+
+[33mcommit 136b5ad984af5ddf29450a25bd658931bdd52fc7[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Thu Mar 18 00:13:25 2021 -0500
+
+    Got block interface (CRUD or CR--) basically set up
+
+[33mcommit 4395d86bc20ad84b09b872ed4407d0710611871b[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Wed Mar 17 22:38:25 2021 -0500
+
+    Got the accountapp working, all the (basic level) CRUD operations for account model done
+
+[33mcommit 12a10ef8c83bf495846bf1fb710e711fa07daf46[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Tue Mar 16 18:48:27 2021 -0500
+
+    Got blockchain completed not tested fully yet but to come
+
+[33mcommit 3bc87245fb954b655a8556c6e04ca45ec60c2da1[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Tue Mar 16 16:46:20 2021 -0500
+
+    Got block proof of work and mine_block working
+
+[33mcommit 84296dac04df7a5b8c83df7c782e3e64cc192bfc[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Mon Mar 15 11:44:58 2021 -0500
+
+    Got string_to_binary/string_to_hex methods set up -->> proof of work
+
+[33mcommit 19f97ab8df9c49f9bdada32c70b05e58a59eedf6[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Sun Mar 14 20:36:30 2021 -0500
+
+    got block class mine_block methods and genesis_block methods and SHA working passing trials
+
+[33mcommit 3be874fc6fed4ce7bbb29d52cd0e25d1fa3885f5[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Mon Mar 8 16:00:42 2021 -0600
+
+    Completed string to message digest string function
+
+[33mcommit 1199362b60febba9b69738c672e814eb9e12b3a7[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Mon Mar 8 15:33:02 2021 -0600
+
+    Got message digest object created
+
+[33mcommit 393ffcac851d71bce6bd35a266a9b34e92fb8d03[m
+Author: GeraldRyan <gerald.ryan40@protonmail.com>
+Date:   Mon Mar 8 14:52:59 2021 -0600
+
+    set up multiple project file structures. got java started!! Got block and blockchain class made with timestamp in ms in the constructor
+
+[33mcommit 4bdc812640497da9f537104bf1c83062e6827a61[m
+Author: Gerald Ryan <46059943+GeraldRyan@users.noreply.github.com>
+Date:   Fri Feb 12 19:13:55 2021 -0600
+
+    Initial commit

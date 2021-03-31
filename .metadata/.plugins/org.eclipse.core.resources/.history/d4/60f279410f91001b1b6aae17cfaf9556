@@ -1,0 +1,9 @@
+package privblock.gerald.ryan.mains;
+
+public class initializerMain {
+
+	
+	public static void main(String[] args) {
+		
+	}
+}

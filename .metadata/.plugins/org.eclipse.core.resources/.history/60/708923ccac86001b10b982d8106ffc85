@@ -1,0 +1,19 @@
+package privblock.gerald.ryan;
+import privblock.gerald.ryan.Block;
+/**
+ * 
+ * @author Gerald Ryan
+ *Blockchain class of blockchain app.
+ *
+ *
+ *
+ */
+
+public class Blockchain {
+
+	Blockchain(){
+		
+	}
+	
+
+}

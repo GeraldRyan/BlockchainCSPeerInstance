@@ -1,0 +1,14 @@
+package privblock.gerald.ryan.dao;
+
+import privblock.gerald.ryan.entity.Block;
+
+public interface BlockDaoI {
+
+	public void addBlock(Block block);
+	public Block getBlock(int id);
+//	public boolean updateBlock(Block block); // I'm not sure this this one is permitted--- perhaps the metadata of the block but not block itself 
+	public void removeBlock(int id); // id or hash? Id of database? Longest chain can be replaced. 
+	public List<Block> getAllBlocks();
+	
+	
+}

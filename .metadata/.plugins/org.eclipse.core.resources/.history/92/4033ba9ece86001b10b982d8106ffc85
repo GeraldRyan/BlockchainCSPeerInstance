@@ -1,0 +1,6 @@
+package privblock.gerald.ryan.dao;
+
+public interface UserI {
+	public void addUser();
+
+}

@@ -1,0 +1,14 @@
+package privblock.gerald.ryan.entity;
+
+public class BlockData {
+	private String blockdata;
+
+	public String getBlockData() {
+		return blockdata;
+	}
+
+	public void setBlockData(String data) {
+		this.blockdata = data;
+	}
+
+}

@@ -1,0 +1,5 @@
+package privblock.gerald.ryan.service;
+
+public class BlockService {
+	private BlockDao blockD = new BlockDao();
+}

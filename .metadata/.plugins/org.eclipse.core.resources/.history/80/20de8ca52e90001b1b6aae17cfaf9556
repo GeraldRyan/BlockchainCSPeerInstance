@@ -1,0 +1,16 @@
+package privblock.gerald.ryan.mains;
+
+import com.pubnub.api.PubNub;
+
+import pubsub.PubNubApp;
+
+public class PlayMain {
+
+	public static void main(String[] args) {
+		PubNub pn = PubNubApp.createConfiguredPubNubInstance();
+		pn.addListener(null);
+		pn.subscribe().channels(null).execute();
+		pn.publish().channel("Ghostcoin").message(new String("THIS")).sync();
+	}
+
+}

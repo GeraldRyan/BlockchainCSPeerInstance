@@ -1,0 +1,19 @@
+package privblock.gerald.ryan.users;
+
+public class Account {
+	int id;
+	int user_id;
+	double balance;
+	String currency;
+	int date_created;
+	String status; // open // closed // frozen
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

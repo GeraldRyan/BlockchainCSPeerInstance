@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="CaseStudyExamp">
+		<class>com.tekglobal.casestudyexample.models.User</class>
+		<!-- <class>com.tekglobal.springmvc.models.Message</class>
+		<class>com.tekglobal.springmvc.models.ArtGal</class>
+		<class>com.tekglobal.springmvc.models.Art</class> -->
+		
+		<properties>
+			<!--  DB configuration -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test_case_study"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="1Stupidtortoise!"/>
+			<property name="javax.persistence.shcema-generation.database.action" value="create" />
+			<!--  EclipseLink configuration 
+			<property name="eclipselink.logging.level" value="INFO"/>
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables"/> -->
+			<!-- Driver -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+			<!-- Hibernate -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.archive.autodetection" value="class, hbm" />
+		</properties>
+	</persistence-unit>
+</persistence>

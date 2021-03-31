@@ -1,0 +1,7 @@
+package privblock.gerald.ryan.dao;
+
+public interface BlockDaoI {
+
+	public void addBlock(Block block);
+	
+}

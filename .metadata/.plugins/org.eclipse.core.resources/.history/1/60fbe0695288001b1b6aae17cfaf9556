@@ -1,0 +1,8 @@
+package privblock.gerald.ryan.service;
+
+public class BlockchainServices {
+	private BlockchainDao blockchainD = new BlockchainDao;
+	
+	
+
+}

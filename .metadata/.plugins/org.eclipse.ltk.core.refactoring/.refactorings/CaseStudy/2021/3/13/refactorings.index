@@ -1,0 +1,16 @@
+1616547400349	Delete element
+1616557607769	Rename type 'ChainTooShort'
+1616640776419	Rename resource 'view'
+1616640795739	Move 'views' to 'WEB-INF'
+1616643606413	Delete element
+1616647118361	Delete element
+1616647696029	Move 'controller' to 'java'
+1616647737374	Move 'privblock' to 'java'
+1616647775721	Move 'exceptions' to 'java'
+1616648838218	Move 'controller' to 'spring'
+1616724469191	Copy file
+1616729883387	Rename resource 'blockchain.jsp'
+1616729894249	Copy file
+1616730251586	Rename resource 'mineblockchain.jsp'
+1616730309479	Rename resource 'mineblock.jsp'
+1616879700610	Rename compilation unit 'StringToBinary.java'

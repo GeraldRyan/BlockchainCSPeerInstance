@@ -1,0 +1,34 @@
+package privblock.gerald.ryan.main;
+
+import java.util.Scanner;
+
+public class AppMain {
+	
+	public static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		
+		int id;
+		
+		int choice = 0;
+		while(choice != 8) {
+			menu();
+			choice = sc.nextInt();
+			switch(choice) {
+			case 1:
+				System.out.println("Pulling up account options");
+			case 2:
+				System.out.println("Pulling up user options");
+			case 3:
+				System.out.println("Pulling up block interface");
+			case 4:
+				System.out.println("Pulling up blockchain interface");
+			case 8:
+				System.out.println("\nClosing down");
+				break;
+			}
+		}
+	}
+
+}

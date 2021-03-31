@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="sun.management.ThreadInfoCompositeData"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="privblock.gerald.ryan.entity.User"/>
+    <fullyQualifiedTypeName name="privblock.gerald.ryan.entity.Block"/>
+    <fullyQualifiedTypeName name="privblock.gerald.ryan.entity.Blockchain"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="privblock.gerald.ryan.dbConnection.DBConnection"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="privblock.gerald.ryan.dao.AccountDao"/>
+    <fullyQualifiedTypeName name="privblock.gerald.ryan.service.AccountService"/>
+    <fullyQualifiedTypeName name="privblock.gerald.ryan.entity.Account"/>
+    <fullyQualifiedTypeName name="javax.persistence.Temporal"/>
+    <fullyQualifiedTypeName name="javax.persistence.TemporalType"/>
+</qualifiedTypeNameHistroy>
