@@ -33,11 +33,11 @@ public class Block {
 
 	public static int blockcount = 0;
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
 	long timestamp;
-	protected String lastHash;
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	int id;
 	protected String hash;
+	protected String lastHash;
 	String[] data;
 	int difficulty;
 	int nonce;
@@ -57,7 +57,7 @@ public class Block {
 		GENESIS_DATA.put("timestamp", Block.GENESIS_TS);
 		GENESIS_DATA.put("last_hash", "genesis_last_hash");
 		GENESIS_DATA.put("hash", "genesis_hash");
-		GENESIS_DATA.put("data", new String[] { "dance", "the", "tango" });
+		GENESIS_DATA.put("data", new String[] { "GENESIS", "GENESIS", "GENESIS" });
 		GENESIS_DATA.put("difficulty", 7);
 		GENESIS_DATA.put("nonce", 1);
 	}
@@ -130,7 +130,7 @@ public class Block {
 			datastring = datastring + s + "|--|";
 		}
 
-		return String.format("%5s %5s %10s %15s %15s %15s", id, timestamp, lastHash, hash, datastring, difficulty,
+		return String.format("%5s %10s %15s %15s %15s", timestamp, lastHash, hash, datastring, difficulty,
 				nonce);
 	}
 
@@ -336,7 +336,7 @@ public class Block {
 		result = prime * result + Arrays.hashCode(data);
 		result = prime * result + difficulty;
 		result = prime * result + ((hash == null) ? 0 : hash.hashCode());
-		result = prime * result + id;
+//		result = prime * result + id;
 		result = prime * result + ((lastHash == null) ? 0 : lastHash.hashCode());
 		result = prime * result + nonce;
 		result = prime * result + (int) (timestamp ^ (timestamp >>> 32));

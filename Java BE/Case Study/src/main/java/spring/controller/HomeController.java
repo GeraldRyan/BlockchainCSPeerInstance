@@ -86,6 +86,9 @@ public class HomeController {
 		try {
 			ArrayList<Block> chain = SyncToNetwork.getNetworkChain("http://localhost:8080/CaseStudy/blockchain");
 			// This should work and replace chain according to our setup
+			
+			System.out.println(chain.get(0).toJSONtheBlock());
+			System.out.println(blockchain.getChain().get(0).toJSONtheBlock());
 			blockchain.replace_chain(chain);
 			System.out.println("WE ARE REPLACING CHAIN AND UPDATING OUR PEER INSTANCE OF BLOCKCHAIN");
 			return blockchain;
