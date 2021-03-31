@@ -41,8 +41,11 @@ public class HomeController {
 	BlockchainService blockchainApp = new BlockchainService();
 	PubNubApp pnapp;
 
+	/*
+	 * This constructor runs when Spring launches this controller? It seems to becuse pnapp doesn't return null anymore.  
+	 */
 	public HomeController() throws InterruptedException {
-//		pnapp = new PubNubApp(); // moved to @modelAttribute new blockchain
+		pnapp = new PubNubApp(); // moved to @modelAttribute new blockchain
 	}
 //	@RequestMapping("/")
 //	public ModelAndView welcome() {
@@ -83,11 +86,15 @@ public class HomeController {
 		try {
 			ArrayList<Block> chain = SyncToNetwork.getNetworkChain("http://localhost:8080/CaseStudy/blockchain");
 			// This should work and replace chain according to our setup
-			System.out.println("WE ARE REPLACING CHAIN AND UPDATING OUR PEER INSTANCE OF BLOCKCHAIN");
 			blockchain.replace_chain(chain);
+			System.out.println("WE ARE REPLACING CHAIN AND UPDATING OUR PEER INSTANCE OF BLOCKCHAIN");
 			return blockchain;
 		} catch (NullPointerException e) {
-			System.err.println("NULL POINTER EXCEPTION THROWN");
+			System.err.println("NULL POINTER EXCEPTION THROWN.");
+			System.err.println(
+					"But no worries. That just means our central node is not up and serving (incommunicado) (or less likely it or our processing of its data just failed for some reason) so our GET request didn't return anything");
+			System.err.println(
+					"We'll just keep using our own local version of the chain knowing its probably too short. We'll also keep broadcasting blocks to the network");
 			return blockchain;
 
 		} catch (NoSuchAlgorithmException e) {
@@ -106,10 +113,10 @@ public class HomeController {
 
 	}
 
-	@ModelAttribute("pubnubapp")
-	public PubNubApp addPubNub() throws InterruptedException {
-		return new PubNubApp();
-	}
+//	@ModelAttribute("pubnubapp")
+//	public PubNubApp addPubNub() throws InterruptedException {
+//		return new PubNubApp();
+//	}
 
 	@GetMapping("/")
 	public String showIndex() {
@@ -136,11 +143,12 @@ public class HomeController {
 	@GetMapping("/blockchain/mine")
 	public String getMine(@ModelAttribute("blockchain") Blockchain blockchain, Model model)
 			throws NoSuchAlgorithmException, PubNubException {
-//		blockchain.add_block("FOOBARFORTHEWIN");
 		String stubbedData = "STUBBED DATA";
 		Block new_block = blockchain.add_block(stubbedData);
-		blockApp.addBlockService(new_block);
 		model.addAttribute("foo", "Bar");
+		
+		// Even though this is an "in memory, synced" peer instance with no dev database, it still mines and broadcasts blocks
+		// and can still influence and change other nodes. 
 		pnapp.broadcastBlock(new_block);
 		return "mine";
 	}

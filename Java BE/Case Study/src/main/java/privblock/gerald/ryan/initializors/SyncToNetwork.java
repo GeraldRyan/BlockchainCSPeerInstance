@@ -41,11 +41,12 @@ public class SyncToNetwork {
 //			System.out.println(jsonString);
 			chain = new Gson().fromJson(jsonString, new TypeToken<List<Block>>() {
 			}.getType());
+			sc.close();
+			return chain;
 		} catch (IOException e) {
 			// e.printStackTrace();
 			return null;
 		}
-		return chain;
 	}
 
 	public static ArrayList<Block> getNetworkChain(String networkURL) throws NoSuchAlgorithmException,

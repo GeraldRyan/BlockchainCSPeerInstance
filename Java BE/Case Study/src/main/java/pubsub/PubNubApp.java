@@ -190,7 +190,7 @@ public class PubNubApp {
 		PNConfiguration pnConfiguration = new PNConfiguration();
 		pnConfiguration.setSubscribeKey(subscribe_key);
 		pnConfiguration.setPublishKey(publish_key);
-		pnConfiguration.setUuid("sdfdvsdvsdv"); // unique UUID
+		pnConfiguration.setUuid("Peer Instance"); // unique UUID
 
 		PubNub pubnub = new PubNub(pnConfiguration);
 
