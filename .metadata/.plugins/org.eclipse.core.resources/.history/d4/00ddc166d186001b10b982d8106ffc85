@@ -1,5 +1,0 @@
-package privblock.gerald.ryan.dao;
-
-public interface AccountDaoI {
-	
-}

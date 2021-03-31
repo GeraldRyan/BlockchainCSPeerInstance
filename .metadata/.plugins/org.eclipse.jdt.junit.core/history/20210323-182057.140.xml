@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestBlock" project="CaseStudy" tests="5" started="5" failures="0" errors="0" ignored="0">
-  <testsuite name="tests.TestBlock" time="5.042">
-    <testcase name="testMine_block" classname="tests.TestBlock" time="0.0"/>
-    <testcase name="testSlowlyMinedBlock" classname="tests.TestBlock" time="5.007"/>
-    <testcase name="testQuicklyMinedBlock" classname="tests.TestBlock" time="0.028"/>
-    <testcase name="testMineBlock" classname="tests.TestBlock" time="0.006"/>
-    <testcase name="testGenesis_block" classname="tests.TestBlock" time="0.001"/>
-  </testsuite>
-</testrun>

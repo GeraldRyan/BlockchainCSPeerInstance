@@ -121,6 +121,8 @@ public class PubNubSubCallback extends com.pubnub.api.callbacks.SubscribeCallbac
 			try {
 				this.blockchain.replace_chain(potential_chain);
 				System.out.println("Successfully replaced the local chain");
+				// TODO - overwrite to database or DAO this replaced chain fact
+				// and add block to the database 
 			} catch (NoSuchAlgorithmException | ChainTooShortException | GenesisBlockInvalidException
 					| BlocksInChainInvalidException e) {
 				// TODO Auto-generated catch block

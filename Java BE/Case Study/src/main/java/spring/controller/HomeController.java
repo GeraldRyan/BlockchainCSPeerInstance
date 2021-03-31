@@ -42,7 +42,8 @@ public class HomeController {
 	PubNubApp pnapp;
 
 	/*
-	 * This constructor runs when Spring launches this controller? It seems to becuse pnapp doesn't return null anymore.  
+	 * This constructor runs when Spring launches this controller? It seems to
+	 * becuse pnapp doesn't return null anymore.
 	 */
 	public HomeController() throws InterruptedException {
 		pnapp = new PubNubApp(); // moved to @modelAttribute new blockchain
@@ -86,11 +87,13 @@ public class HomeController {
 		try {
 			ArrayList<Block> chain = SyncToNetwork.getNetworkChain("http://localhost:8080/CaseStudy/blockchain");
 			// This should work and replace chain according to our setup
-			
+
 			System.out.println(chain.get(0).toJSONtheBlock());
 			System.out.println(blockchain.getChain().get(0).toJSONtheBlock());
 			blockchain.replace_chain(chain);
 			System.out.println("WE ARE REPLACING CHAIN AND UPDATING OUR PEER INSTANCE OF BLOCKCHAIN");
+			return blockchain;
+		} catch (IllegalStateException e) {
 			return blockchain;
 		} catch (NullPointerException e) {
 			System.err.println("NULL POINTER EXCEPTION THROWN.");
@@ -146,12 +149,13 @@ public class HomeController {
 	@GetMapping("/blockchain/mine")
 	public String getMine(@ModelAttribute("blockchain") Blockchain blockchain, Model model)
 			throws NoSuchAlgorithmException, PubNubException {
-		String stubbedData = "STUBBED DATA";
+		String stubbedData = "PEER INSTANCE DATA!!";
 		Block new_block = blockchain.add_block(stubbedData);
 		model.addAttribute("foo", "Bar");
-		
-		// Even though this is an "in memory, synced" peer instance with no dev database, it still mines and broadcasts blocks
-		// and can still influence and change other nodes. 
+
+		// Even though this is an "in memory, synced" peer instance with no dev
+		// database, it still mines and broadcasts blocks
+		// and can still influence and change other nodes.
 		pnapp.broadcastBlock(new_block);
 		return "mine";
 	}

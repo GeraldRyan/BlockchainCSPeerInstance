@@ -1,7 +1,0 @@
-package pubsub;
-
-public class PubSub {
-
-	private String publish_key;
-	private STring subscribe_key;
-}

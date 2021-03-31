@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.apache.http.HttpEntity;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -22,31 +23,35 @@ import privblock.gerald.ryan.entity.Block;
 
 public class SyncToNetwork {
 
-	public static ArrayList<Block> getNetworkChain() throws NoSuchAlgorithmException, ChainTooShortException,
-			GenesisBlockInvalidException, BlocksInChainInvalidException {
+	public static ArrayList<Block> getNetworkChain()
+			throws NoSuchAlgorithmException, ChainTooShortException, GenesisBlockInvalidException,
+			BlocksInChainInvalidException, IllegalStateException, ClientProtocolException, IOException {
 		ArrayList<Block> chain;
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		HttpGet httpGet = new HttpGet("http://localhost:8080/CaseStudy/blockchain");
 		CloseableHttpResponse response;
 		String response_string = "";
-		try {
-			response = httpclient.execute(httpGet);
-			HttpEntity entity1 = response.getEntity();
-			Scanner sc = new Scanner(entity1.getContent());
-			while (sc.hasNext()) {
-				String next = sc.nextLine();
-				response_string += next;
-			}
-			String jsonString = response_string.replaceAll("</?[^>]+>", "").trim();
+
+		response = httpclient.execute(httpGet);
+		HttpEntity entity1 = response.getEntity();
+		Scanner sc = new Scanner(entity1.getContent());
+		while (sc.hasNext()) {
+			String next = sc.nextLine();
+			response_string += next;
+		}
+		String jsonString = response_string.replaceAll("</?[^>]+>", "").trim();
 //			System.out.println(jsonString);
+
+		try {
 			chain = new Gson().fromJson(jsonString, new TypeToken<List<Block>>() {
 			}.getType());
 			sc.close();
 			return chain;
-		} catch (IOException e) {
-			// e.printStackTrace();
+		} catch (Exception e) {
+			sc.close();
 			return null;
 		}
+
 	}
 
 	public static ArrayList<Block> getNetworkChain(String networkURL) throws NoSuchAlgorithmException,
@@ -71,7 +76,10 @@ public class SyncToNetwork {
 		} catch (IOException e) {
 			// e.printStackTrace();
 			return null;
+		} catch (Exception e) {
+			return null;
 		}
+
 		return chain;
 	}
 }

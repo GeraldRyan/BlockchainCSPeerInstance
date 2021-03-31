@@ -1,7 +1,0 @@
-package pubsub;
-
-import SubscribeCallback;
-
-public class PubNubSCI extends com.pubnub.api.callbacks.SubscribeCallback {
-
-}
