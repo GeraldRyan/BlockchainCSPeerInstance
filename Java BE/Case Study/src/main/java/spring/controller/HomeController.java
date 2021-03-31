@@ -82,7 +82,7 @@ public class HomeController {
 		 * instance. In reality it would have its own
 		 */
 		Blockchain blockchain = Blockchain.createBlockchainInstance("beancoin");
-
+		
 		// This is where the magic happens
 		try {
 			ArrayList<Block> chain = SyncToNetwork.getNetworkChain("http://localhost:8080/CaseStudy/blockchain");
