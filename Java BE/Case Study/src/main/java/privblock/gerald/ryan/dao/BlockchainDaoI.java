@@ -1,5 +1,7 @@
 package privblock.gerald.ryan.dao;
 
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.List;
 
 import privblock.gerald.ryan.entity.Block;
@@ -15,5 +17,6 @@ public interface BlockchainDaoI {
 	public Block getBlockById(int id); 
 	public Block getBlockByHash(String hash); // is it a long? TODO Implement // could overload method if types differ
 	public Blockchain getBlockchainByName(String name);
+	boolean replaceChain(String name, ArrayList<Block> new_chain) throws NoSuchAlgorithmException;
 	
 }

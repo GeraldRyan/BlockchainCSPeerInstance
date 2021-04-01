@@ -54,6 +54,10 @@ public class Blockchain {
 	@JoinTable(name = "BlocksByChain")
 	List<Block> chain; // The chain itself
 
+	public void setChain(List<Block> chain) {
+		this.chain = chain;
+	}
+
 	/**
 	 * Constructor function, initializes an ArrayList of Blocks with a valid genesis
 	 * block. Future blocks are to be mined.

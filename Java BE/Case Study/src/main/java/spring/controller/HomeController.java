@@ -1,5 +1,7 @@
 package spring.controller;
 
+import java.io.IOException;
+
 //select instance_name,b.id,hash,data from blockchain c inner join blocksbychain bc on c.id=bc.blockchain_id inner join block b on bc.chain_id=b.id;
 
 import java.security.NoSuchAlgorithmException;
@@ -82,7 +84,7 @@ public class HomeController {
 		 * instance. In reality it would have its own
 		 */
 		Blockchain blockchain = Blockchain.createBlockchainInstance("beancoin");
-		
+
 		// This is where the magic happens
 		try {
 			ArrayList<Block> chain = SyncToNetwork.getNetworkChain("http://localhost:8080/CaseStudy/blockchain");
@@ -116,7 +118,21 @@ public class HomeController {
 			System.err.println("Blocks In Chain Invalid Exception");
 			return blockchain;
 		}
+	}
 
+	public void resyncChain(Model model) {
+		System.err.println("Resyncing chain from 8080");
+		try {
+			ArrayList<Block> newer_chain = SyncToNetwork.getNetworkChain();
+
+			// side effect of updating the model to display to page (or work with in other
+			// ways)
+			((Blockchain) model.getAttribute("blockchain")).replace_chain(newer_chain);
+		} catch (NoSuchAlgorithmException | IllegalStateException | ChainTooShortException
+				| GenesisBlockInvalidException | BlocksInChainInvalidException | IOException e) {
+			System.err.println("Foreign blockchain not replaced. Local copy remains");
+			return;
+		}
 	}
 
 //	@ModelAttribute("pubnubapp")
@@ -131,6 +147,7 @@ public class HomeController {
 
 	@GetMapping("/blockchain")
 	public String serveBlockchain(Model model) {
+		resyncChain(model);
 		return "blockchain";
 	}
 

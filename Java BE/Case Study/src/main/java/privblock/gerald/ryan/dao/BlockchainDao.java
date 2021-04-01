@@ -1,6 +1,7 @@
 package privblock.gerald.ryan.dao;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Query;
@@ -115,6 +116,12 @@ public class BlockchainDao extends DBConnection implements BlockchainDaoI {
 	public Block getBlockByHash(String hash) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean replaceChain(String name, ArrayList<Block> new_chain) throws NoSuchAlgorithmException {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
