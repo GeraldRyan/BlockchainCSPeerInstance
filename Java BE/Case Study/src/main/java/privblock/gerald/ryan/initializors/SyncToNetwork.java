@@ -21,6 +21,11 @@ import exceptions.ChainTooShortException;
 import exceptions.GenesisBlockInvalidException;
 import privblock.gerald.ryan.entity.Block;
 
+/**
+ * 
+ * Main method for syncing to trusted network nodes, to be run on startup of application (start your mining and operation with the latest instance
+ * So that what you mine creates valid chains
+ */
 public class SyncToNetwork {
 
 	public static ArrayList<Block> getNetworkChain()
